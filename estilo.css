@@ -1,0 +1,325 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --roxo-escuro: #240046;
+    --roxo: #3C096C;
+    --roxo-claro: #7B2CBF;
+    --laranja-escuro: #FF7900;
+    --laranja: #FF8500;
+    --verde:#80C423;
+    --rosa: #F72585;
+    --branco: #F4F3F3;
+    --preto: #272727;
+    --fonte-titulo: "Geologica", sans-serif;
+    --fonte-texto: "Inter", sans-serif;
+}
+body{
+    font-family: var(--fonte-texto);
+}
+.container{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+#topo{
+    min-height:600px;
+    padding: 20px 10px;
+    background-image: linear-gradient( var(--roxo-escuro), var(--roxo-claro) );
+}
+.grid-topo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+#menu-topo{
+    grid-column:2/4;
+}
+
+.grid-topo > h2{
+    grid-column:1/3;
+    align-self:center;
+
+    font-family: var(--fonte-titulo);
+    font-size: 6rem;
+    font-weight: 900;
+    text-align:center;
+    color:var(--branco);
+    line-height: 100%;
+    text-shadow: 4px 8px 10px #00000060;
+
+}
+
+.grid-topo > h2 > span{
+    color:var(--laranja);
+}
+
+
+#menu-topo > ul{
+    display:flex;
+    list-style:none;
+    justify-content: space-around;
+    align-items: center;
+    height:100%;
+}
+
+#menu-topo a {
+    font-size:1.5rem;
+    font-family: var(--fonte-titulo);
+    color: var(--branco);
+    text-decoration:none;
+    padding-bottom:5px;
+   
+}
+#menu-topo a:hover{
+    color:var(--laranja);
+    border-bottom: 1px solid var(--laranja);
+}
+
+#menu-topo .atual{
+    color:var(--laranja);
+     border-bottom: 1px solid var(--laranja);
+}
+
+#info{
+    min-height: 370px;
+    background-color: var(--laranja);
+    padding: 20px 10px;
+}
+
+#info h3{
+    font-family:var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: 900;
+    background-color: var(--roxo-escuro);
+    color:var(--branco);
+    text-align:center;
+    width:fit-content;
+    margin:0 auto;
+    padding:10px;
+    border-radius:10px; 
+  
+}
+#info .icones{
+    display:grid;
+    margin:20px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.icones article{
+    max-width:260px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.icones h4{
+    text-align: center;
+    font-size:1.5rem;
+    color:var(--roxo);
+    font-weight: 900;
+    margin-top:20px;
+}
+
+#pedido{
+    min-height:660px;
+    padding:20px 10px;
+
+}
+
+#pedido h3{
+    font-family:var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--laranja-escuro);
+    margin:20px 0; 
+}
+
+.produtos{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top:50px;
+}
+
+.produtos > article{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px auto auto auto;
+    justify-items: center;
+    align-items: end;
+    gap:10px;
+
+}
+
+.produtos h4 > a{
+    font-size:1.5rem;
+    color:var(--roxo-escuro);
+    font-family: var(--fonte-titulo);
+    font-weight: 900;
+    text-align:center;
+    text-decoration: none;   
+}
+
+.produtos p{
+    font-size:1.15rem;
+    color:var(--roxo-claro);
+    text-align: center;
+    margin-bottom:30px;
+}
+
+.bt-roxo{
+    background-color: var(--roxo-escuro);
+    color:var(--laranja);
+    font-size:1.15rem;
+    border-radius:20px;
+    box-shadow: 0px 4px 4px #00000025;
+    text-decoration: none;
+    padding:10px 20px;
+    
+}
+
+.bt-roxo:hover{
+     color:var(--roxo-escuro);
+     background-color: var(--laranja);
+}
+
+#quemsomos{
+    min-height:450px;
+    background-color:var(--verde);
+    padding:20px 10px 0;
+
+}
+
+.grid-quemsomos{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: start;
+}
+
+
+#quemsomos h3{
+    font-family:var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--branco);
+    margin:20px 0; 
+    grid-column:1/2;
+}
+
+#quemsomos img{
+    grid-row: 1/5;
+    grid-column:2/3;
+}
+
+#quemsomos p{
+    font-size:1.25rem;
+    color:var(--preto);
+}
+
+.bt-laranja{
+    background-color: var(--laranja-escuro);
+    color:var(--branco);
+    font-size:1.15rem;
+    border-radius:20px;
+    box-shadow: 0px 4px 4px #00000025;
+    text-decoration: none;
+    padding:10px 20px;
+    
+}
+
+.bt-laranja:hover{
+     color:var(--laranja-escuro);
+     background-color: var(--branco);
+}
+
+#nossaloja{
+    min-height:540px;
+    background-color:var(--rosa);
+     padding:10px 20px;
+}
+
+#nossaloja h3{
+    font-family:var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--branco);
+    margin:20px 0; 
+    grid-column:1/3;
+}
+
+.grid-nossaloja{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-nossaloja img{
+    grid-column:2/3;
+    grid-row:2/4;
+}
+
+.grid-nossaloja p{
+    font-size:1.25rem;
+    color:var(--branco);
+    width:80%;
+}
+
+#rodape{
+    background-color: var(--roxo-escuro);
+    min-height: 380px;
+    background-image: url("imagens/acai-rodape.png");
+    background-repeat:no-repeat;
+    background-position:bottom right;
+}
+.grid-rodape{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height:350px;
+
+}
+
+#redes a {
+    margin:10px;
+}
+
+.area-interna{
+    min-height:600px;
+    padding:10px 20px;
+}
+
+.area-interna h3{
+    font-family:var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--roxo-escuro);
+    margin:20px 0; 
+}
+
+.area-interna p{
+    font-size:1.15rem;
+    color:var(--preto);
+    line-height: 150%;
+    text-indent: 48px;
+    margin-bottom:16px;
+    text-align: justify;
+}
+
+.area-interna .imagem-esquerda{
+    width:350px;
+    border:5px solid var(--roxo-escuro);
+    border-radius:10px;
+    margin:10px;
+    float:left;
+}
+
+.area-interna .imagem-direita{
+    width:350px;
+    border:5px solid var(--roxo-escuro);
+    border-radius:10px;
+    margin:10px;
+    float:right;
+}
